@@ -1,0 +1,36 @@
+
+
+02 lecture
+
+Динамично типизиран
+
+Делене на int с int gives float
+    / -> Делене
+    // -> Целочислено делене
+    % -> Остатък 
+
+Strings
+len(str) -> length
+.lower() -> lower case convert
+.higher() -> big case convert
+
+\t -> tab
+
+Запазване на ' " \ -> with \ before
+ord('A') -> gives ascii code
+chr(64) -> giver u the value 
+
+smth = "symbol".join(sequence) -> concats all element(type string) of sequence seperated with symbol
+
+
+Formating 
+
+%
+
+str.format()
+.replace(a,b); -> only for strings
+
+
+f-strings 
+-> we use variable with its saved value 
+f"jdhjsd {name}   ..... "
