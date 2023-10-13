@@ -1,11 +1,8 @@
 def number_of_vowels(text):
-    count = 0
+    text=text.lower()
+    count=0
     for char  in text:
-        if char.lower() == 'a' or char.lower() == 'e' or char.lower() == 'i' or char.lower() == 'o' or char.lower() == 'u':
-            count += 1
-        
-        print(char.lower())
-            
+        if char in "aeiou": count+=1
     return count
 
 
