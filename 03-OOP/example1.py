@@ -83,3 +83,5 @@ leng = pp._collection.__len__()
 
 for i in range(leng):
     print(pp.__getElAt__(i))
+
+# add iterator
