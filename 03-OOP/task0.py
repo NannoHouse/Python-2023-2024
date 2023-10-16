@@ -2,12 +2,12 @@ from math import sqrt, sin, cos, atan  # you will need these
 from math import pi, isclose
 class PolarCoordinate:
     def __init__(self,r,fi):
-        self.r = r
-        self.fi = fi
+        self.__r = r
+        self.__fi = fi
     def get_r(self):
-        return self.r
+        return self.__r
     def get_fi(self):
-        return self.fi
+        return self.__fi
     def to_cartesian(self):
         x=self.get_r() * cos(self.get_fi())
         y=self.get_r() * sin(self.get_fi())
@@ -29,20 +29,20 @@ class PolarCoordinate:
 
     #define == and !=
     def __eq__(self,other):
-        return self.r == other.r and self.fi == other.fi
+        return self.get_r() == other.get_r() and self.get_fi() == other.get_fi()
     def __neq__(self,other):
-        return self.r != other.r or self.fi != other.fi
+        return self.get_r() != other.get_r() or self.get_fi() != other.get_fi()
 
 
 p1 = PolarCoordinate(1, pi/6)
 
-print(p1.r == 1)
-print(p1.fi == pi/6)
+print(p1.get_r() == 1)
+print(p1.get_fi() == pi/6)
 p2 = PolarCoordinate.from_cartesian(3, 4)
-print(isclose(p2.r, 5))
+print(isclose(p2.get_r(), 5))
 
 # false - 
-print(isclose(p2.fi, atan(4/3)))
+print(isclose(p2.get_fi(), atan(4/3)))
 x, y = p2.to_cartesian()
 print(isclose(x, 3))
 print(isclose(y, 4))
@@ -64,3 +64,4 @@ print(d[pp3] == "C")
 
 s = {p1, p2, p3, pp1, pp2, pp3, p1, p2, p3}
 print(len(s) == 3)
+
