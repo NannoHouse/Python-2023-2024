@@ -74,9 +74,6 @@ class Player:
             case "BEEF" : self.increase_hp(4)
             case "BANANA" : self.increase_hp(5)
 
-
-
-
 p1=Player("Cecka",10,300)
 p2=Player("Stoyan",4,1000)
 p3=Player("Kaloyan",-5,1100)
@@ -90,4 +87,10 @@ print(p1)
 print(p2)
 print(p3)
 p2.fight(p3)
+print(p1)
+print(p2)
+print(p3)
 p3.fight(p1)
+print(p1)
+print(p2)
+print(p3)
