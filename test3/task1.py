@@ -23,7 +23,7 @@ def vankata(izrechenie:(int,str)) -> int:
     if len(ls[0]) == 0 or ls[0][0]!= '-': raise InvalidLineError(izrechenie[0])
     if len(ls[0][1:])== 0 or ls[0][1:].isdigit(): raise InvalidItemError(ls[0][1:])
     if not ls[1].isdigit(): raise InvalidQuantityError(ls[1],ls[0][1:])
-    if not ls[2].replace('.','0').replace('','0').isdigit(): raise InvalidPriceError(ls[2],ls[0][1:])
+    if not ls[2].replace('.','0').replace('\n','0').isdigit(): raise InvalidPriceError(ls[2],ls[0][1:])
     return int(ls[1]) * float(ls[2])
 
 def validate_list(path:str)-> int:
@@ -32,7 +32,6 @@ def validate_list(path:str)-> int:
     except FileNotFoundError as se:
         raise ListFileError
     info = kms.readlines()
-    for x in info: print(len(x))
     try: 
         l= [vankata((i,x)) for i,x in enumerate(info) ]
     except Exception as s:
